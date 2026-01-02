@@ -1,0 +1,68 @@
+.site-footer {
+  background: #02070f;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 26px 6%;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 13px;
+  color: #9fb2d8;
+}
+
+.footer-links {
+  color: #9fb2d8;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+/* ================================
+   EXTRA MOBILE RESPONSIVE – FOOTER
+================================ */
+
+/* TABLETS & LARGE PHONES */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 22px 6%;
+  }
+
+  .footer-inner {
+    font-size: 12.5px;
+    line-height: 1.6;
+    gap: 12px;
+  }
+
+  .footer-links {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 20px 5%;
+  }
+
+  .footer-inner {
+    font-size: 12px;
+  }
+
+  .footer-links {
+    gap: 10px;
+  }
+}

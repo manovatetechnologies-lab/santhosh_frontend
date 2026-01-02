@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a2a52, #050b18);
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+section {
+  min-height: 100vh;
+  
+}
+html,
+body {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+/* GLOBAL FIX */
+html,
+body {
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+
+/* HERO FIX */
+.hero {
+  min-height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.hero-right {
+  overflow: hidden;
+}

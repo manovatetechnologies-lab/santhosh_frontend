@@ -1,0 +1,377 @@
+/* ================================
+   EXPERIENCE SPOTLIGHT
+================================ */
+
+.experience-spotlight {
+  padding: 140px 6%;
+  background: radial-gradient(circle at top, #071a33, #020b18);
+  color: #ffffff;
+}
+
+.experience-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.experience-header {
+  max-width: 720px;
+  margin-bottom: 90px;
+}
+
+.section-tag {
+  letter-spacing: 4px;
+  font-size: 13px;
+  color: #f5d26a;
+}
+
+.experience-header h2 {
+  font-size: 44px;
+  margin: 18px 0 20px;
+}
+
+.experience-header p {
+  font-size: 17px;
+  color: #cfd9ff;
+  line-height: 1.7;
+}
+
+/* ROLE ROW */
+.role-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.5fr;
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+/* ================================
+   ROLE HOVER INTERACTION
+================================ */
+
+.role-row {
+  position: relative;
+  padding: 26px 28px;
+  border-radius: 22px;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.35s ease,
+    box-shadow 0.35s ease,
+    border 0.35s ease;
+}
+
+/* subtle glass surface on hover */
+.role-row:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 42, 82, 0.55),
+    rgba(9, 20, 44, 0.55)
+  );
+
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,0.55),
+    0 0 0 1px rgba(245,210,106,0.25);
+}
+
+/* ROLE TITLE EMPHASIS */
+.role-row:hover .role-main h3 {
+  color: #ffffff;
+}
+
+/* COMPANY TEXT SOFT GOLD TINT */
+.role-row:hover .company {
+  color: #f5d26a;
+}
+
+/* YEARS — STRONG FOCUS */
+.role-row:hover .years {
+  color: #f5d26a;
+  transform: translateY(-2px);
+}
+
+/* DETAILS SOFT LIFT */
+.role-row:hover .role-details {
+  transform: translateY(-2px);
+}
+
+/* TRANSITIONS */
+.role-main h3,
+.company,
+.years,
+.role-details {
+  transition: all 0.35s ease;
+}
+
+
+.role-main h3 {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.company {
+  font-size: 15px;
+  color: #9fb2d8;
+}
+
+/* META */
+.role-meta {
+  text-align: right;
+}
+
+.years {
+  font-size: 15px;
+  color: #f5d26a;
+  font-weight: 600;
+}
+
+/* DETAILS */
+.role-details {
+  grid-column: 1 / -1;
+  margin-top: 14px;
+  max-width: 900px;
+}
+
+.role-details p {
+  font-size: 16px;
+  color: #cfd9ff;
+  margin-bottom: 14px;
+}
+
+.role-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.role-details li {
+  font-size: 15px;
+  color: #cfd9ff;
+  margin-bottom: 10px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.role-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f5d26a;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .experience-spotlight {
+    padding: 100px 24px;
+  }
+
+  .role-row {
+    grid-template-columns: 1fr;
+  }
+
+  .role-meta {
+    text-align: left;
+    margin-top: 6px;
+  }
+
+  .experience-header h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience-header h2 {
+    font-size: 30px;
+  }
+
+  .role-main h3 {
+    font-size: 22px;
+  }
+}
+/* ================================
+   EXPERIENCE READABILITY REFINEMENT
+   (NO DESIGN CHANGE – TYPO FIX ONLY)
+================================ */
+
+/* Limit text width for readability */
+.role-details {
+  max-width: 820px;
+}
+
+/* Improve paragraph rhythm */
+.role-details p {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #d6def2;
+  margin-bottom: 22px;
+  font-weight: 400;
+}
+
+/* Subtle visual separation between narrative & bullets */
+.role-details p + ul {
+  margin-top: 18px;
+}
+
+/* Bullet list cleanup */
+.role-details ul {
+  margin-top: 12px;
+  padding-left: 22px;
+}
+
+/* Bullet spacing & clarity */
+.role-details ul li {
+  font-size: 16px;
+  line-height: 1.75;
+  margin-bottom: 14px;
+  color: #e6ebff;
+}
+
+/* Bullet marker refinement */
+.role-details ul li::marker {
+  color: #f5d26a;
+}
+
+/* Slight indent for visual hierarchy */
+.role-details ul li {
+  padding-left: 6px;
+}
+
+/* Company name breathing room */
+.role-main .company {
+  display: inline-block;
+  margin-top: 6px;
+}
+
+/* Role block vertical rhythm */
+.role-row {
+  padding-bottom: 36px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .role-details {
+    max-width: 100%;
+  }
+
+  .role-details p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .role-details ul li {
+    font-size: 15px;
+  }
+}
+/* ================================
+   EXTRA MOBILE RESPONSIVE – EXPERIENCE SPOTLIGHT
+   (NO CHANGES ABOVE)
+================================ */
+
+/* LARGE PHONES & SMALL TABLETS */
+@media (max-width: 640px) {
+  .experience-spotlight {
+    padding: 90px 5%;
+  }
+
+  .experience-header {
+    margin-bottom: 60px;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .experience-header h2 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
+  .experience-header p {
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  .role-row {
+    padding: 22px 22px 30px;
+    margin-bottom: 48px;
+    border-radius: 20px;
+  }
+
+  .role-main h3 {
+    font-size: 21px;
+  }
+
+  .company {
+    font-size: 14px;
+  }
+
+  .years {
+    font-size: 14px;
+  }
+
+  .role-details p {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  .role-details ul li {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 480px) {
+  .experience-spotlight {
+    padding: 80px 5%;
+  }
+
+  .experience-header h2 {
+    font-size: 26px;
+  }
+
+  .experience-header p {
+    font-size: 14.5px;
+  }
+
+  .role-row {
+    padding: 20px 18px 26px;
+  }
+
+  .role-main h3 {
+    font-size: 20px;
+  }
+
+  .company {
+    font-size: 13.5px;
+  }
+
+  .years {
+    font-size: 13.5px;
+  }
+
+  .role-details {
+    margin-top: 16px;
+  }
+
+  .role-details p {
+    font-size: 14.5px;
+    line-height: 1.7;
+  }
+
+  .role-details ul li {
+    font-size: 14.5px;
+    margin-bottom: 12px;
+  }
+}

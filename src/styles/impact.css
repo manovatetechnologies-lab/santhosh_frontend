@@ -1,0 +1,463 @@
+/* ================================
+   IMPACT SECTION (NAVY THEME)
+================================ */
+
+.impact-replica {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 56px;
+  padding: 120px 80px;
+
+  background: radial-gradient(
+    900px 600px at top left,
+    #0b2a55,
+    #040b18 70%
+  );
+}
+
+/* ================================
+   LEFT GRID
+================================ */
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+/* ================================
+   CARD (NAVY GLASS)
+================================ */
+
+.impact-card {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 42, 82, 0.85),
+    rgba(9, 20, 44, 0.85)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 26px;
+
+  backdrop-filter: blur(18px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+/* ================================
+   CARD HEADER
+================================ */
+
+.impact-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.impact-card-header span {
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #f5d26a;
+}
+
+.impact-card-header svg {
+  color: #f5d26a;
+  font-size: 20px;
+}
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.impact-card h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.impact-card p {
+  color: #c7d2e2;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RIGHT GRAPH CONTAINER
+================================ */
+
+.impact-graph {
+  background: linear-gradient(
+    180deg,
+    rgba(18, 42, 82, 0.85),
+    rgba(9, 20, 44, 0.85)
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 26px;
+  padding: 40px;
+
+  height: 100%;
+  flex-direction: column;
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.55);
+}
+
+.graph-title {
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #f5d26a;
+}
+
+.impact-graph svg {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+/* ================================
+   GRAPH BASE
+================================ */
+
+.growth-svg {
+  width: 100%;
+}
+
+/* AXES */
+
+.axis {
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 1;
+}
+
+/* ================================
+   LINE DRAW ANIMATION
+================================ */
+
+.growth-line {
+  fill: none;
+  stroke: #f5d26a;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  transition: stroke-dashoffset 1.6s ease;
+}
+
+
+/* ================================
+   DATA POINTS
+================================ */
+
+.growth-points circle {
+  fill: #f5d26a;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* ================================
+   AXIS LABELS
+================================ */
+
+.growth-labels text {
+  fill: rgba(255, 255, 255, 0.55);
+  font-size: 11px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* ================================
+   SCROLL REVEAL TRIGGER
+================================ */
+
+.graph-reveal.active .growth-line {
+  stroke-dashoffset: 0;
+}
+
+.graph-reveal.active .growth-points circle {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* STAGGER POINTS */
+
+.graph-reveal.active .growth-points circle:nth-child(1) { transition-delay: 0.6s; }
+.graph-reveal.active .growth-points circle:nth-child(2) { transition-delay: 0.75s; }
+.graph-reveal.active .growth-points circle:nth-child(3) { transition-delay: 0.9s; }
+.graph-reveal.active .growth-points circle:nth-child(4) { transition-delay: 1.05s; }
+.graph-reveal.active .growth-points circle:nth-child(5) { transition-delay: 1.2s; }
+.graph-reveal.active .growth-points circle:nth-child(6) { transition-delay: 1.35s; }
+
+.graph-reveal.active .growth-labels text {
+  opacity: 1;
+  transition-delay: 1.1s;
+}
+
+/* ================================
+   TOOLTIP
+================================ */
+
+.graph-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.graph-tooltip {
+  position: absolute;
+  background: rgba(9, 20, 44, 0.95);
+  border: 1px solid rgba(245, 210, 106, 0.35);
+  color: #ffffff;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+
+  pointer-events: none;
+  transform: translateY(-8px);
+  animation: fadeUp 0.2s ease;
+}
+
+.graph-tooltip strong {
+  display: block;
+  color: #f5d26a;
+  font-weight: 600;
+}
+
+/* ================================
+   POINT HOVER
+================================ */
+
+.growth-point {
+  fill: #f5d26a;
+  cursor: pointer;
+  transition: filter 0.2s ease, stroke 0.2s ease;
+}
+
+.growth-point:hover {
+  stroke: rgba(245, 210, 106, 0.8);
+  stroke-width: 4;
+  filter: drop-shadow(0 0 6px rgba(245, 210, 106, 0.8));
+}
+
+/* ================================
+   TOOLTIP ANIMATION
+================================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-8px);
+  }
+}
+
+/* ================================
+   IMPACT SECTION RESPONSIVE
+================================ */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .impact-replica {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    padding: 100px 48px;
+  }
+
+  .impact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .impact-graph {
+    padding: 32px;
+    min-height: 420px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .impact-replica {
+    padding: 90px 24px;
+    gap: 40px;
+  }
+
+  /* STACK CARDS */
+  .impact-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .impact-card {
+    padding: 22px;
+  }
+
+  .impact-card h2 {
+    font-size: 32px;
+  }
+
+  .impact-card p {
+    font-size: 14px;
+  }
+
+  /* GRAPH */
+  .impact-graph {
+    padding: 26px 22px;
+    min-height: 360px;
+  }
+
+  .graph-title {
+    font-size: 11px;
+    margin-bottom: 14px;
+  }
+
+  .impact-graph svg {
+    height: 260px;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .impact-replica {
+    padding: 70px 18px;
+  }
+
+  .impact-card h2 {
+    font-size: 28px;
+  }
+
+  .impact-card-header span {
+    font-size: 11px;
+  }
+
+  .impact-graph {
+    padding: 22px 18px;
+  }
+
+  .impact-graph svg {
+    height: 220px;
+  }
+}
+
+
+/* Y axis numbers */
+.y-label {
+  fill: rgba(255, 255, 255, 0.85); /* white */
+  font-size: 12px;
+  font-family: Inter, sans-serif;
+}
+
+/* X axis year labels */
+.x-label {
+  fill: rgba(255, 255, 255, 0.75); /* white */
+  font-size: 12px;
+  text-anchor: middle;
+  font-family: Inter, sans-serif;
+}
+
+.y-label {
+  fill: rgba(255, 255, 255, 0.6);
+}
+
+.x-label {
+  fill: rgba(255, 255, 255, 0.55);
+}
+/* =====================================
+   EXTRA MOBILE POLISH – IMPACT SECTION
+   (NO EXISTING CODE CHANGED)
+===================================== */
+
+/* VERY SMALL PHONES */
+@media (max-width: 360px) {
+  .impact-replica {
+    padding: 64px 14px;
+    gap: 32px;
+  }
+
+  .impact-card {
+    padding: 18px;
+  }
+
+  .impact-card h2 {
+    font-size: 26px;
+  }
+
+  .impact-card p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .impact-graph {
+    padding: 18px 16px;
+    min-height: 300px;
+  }
+
+  .impact-graph svg {
+    height: 200px;
+  }
+}
+
+/* LANDSCAPE MOBILE (HEIGHT LIMITED) */
+@media (max-height: 650px) and (max-width: 900px) {
+  .impact-replica {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .impact-graph svg {
+    height: 240px;
+  }
+}
+
+/* TOUCH DEVICES – REMOVE HOVER DEPENDENCY */
+@media (hover: none) {
+  .growth-point:hover {
+    stroke: none;
+    filter: none;
+  }
+
+  .impact-card:hover {
+    transform: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+  }
+}
+
+/* PREVENT HORIZONTAL OVERFLOW */
+.impact-replica,
+.impact-cards,
+.impact-graph,
+.graph-wrapper {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* SVG SAFETY ON SMALL SCREENS */
+.growth-svg {
+  min-width: 280px;
+}
+
+/* AXIS LABEL SCALING FOR SMALL DEVICES */
+@media (max-width: 480px) {
+  .y-label,
+  .x-label {
+    font-size: 10px;
+  }
+}
+.impact-graph {
+  overflow: hidden; /* 🔥 kills scrollbar & arrow */
+}
+.impact-graph,
+.graph-wrapper,
+.impact-graph svg {
+  overflow: hidden;
+}

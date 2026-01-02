@@ -1,0 +1,202 @@
+.skill-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  font-size: 22px;
+  color: #f5d26a;
+  filter: drop-shadow(0 0 6px rgba(245,210,106,0.35));
+}
+
+
+
+.skills-bands {
+  padding: 140px 6%;
+  background: radial-gradient(circle at top, #071a33, #020b18);
+  color: #fff;
+}
+
+/* HEADER */
+.skills-tag {
+  letter-spacing: 4px;
+  font-size: 13px;
+  color: #f5d26a;
+}
+
+.skills-title {
+  font-size: 46px;
+  max-width: 900px;
+  margin: 20px 0 80px;
+}
+
+/* BAND */
+.skill-band {
+  max-width: 1000px;
+  margin-bottom: 90px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.22,1,0.36,1);
+}
+
+.skill-band.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.skill-band h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.skill-band p {
+  font-size: 17px;
+  color: #cfd9ff;
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+/* CHIPS */
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skill-chips span {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  font-size: 14px;
+  color: #cfd9ff;
+  transition: all 0.25s ease;
+}
+
+.skill-chips span:hover {
+  color: #f5d26a;
+  border-color: rgba(245,210,106,0.45);
+  background: rgba(245,210,106,0.08);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .skills-title {
+    font-size: 36px;
+  }
+
+  .skill-band h3 {
+    font-size: 24px;
+  }
+}
+/* =====================================================
+   SKILLS SECTION — MOBILE RESPONSIVE ADD-ON
+   (ADD AT END – DESKTOP REMAINS UNCHANGED)
+===================================================== */
+
+/* -------- TABLET (≤1024px) -------- */
+@media (max-width: 1024px) {
+  .skills-bands {
+    padding: 110px 5%;
+  }
+
+  .skills-title {
+    font-size: 40px;
+    margin-bottom: 64px;
+  }
+
+  .skill-band {
+    margin-bottom: 70px;
+  }
+
+  .skill-band p {
+    font-size: 16px;
+  }
+}
+
+/* -------- MOBILE (≤768px) -------- */
+@media (max-width: 768px) {
+  .skills-bands {
+    padding: 90px 24px;
+  }
+
+  .skills-tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .skills-title {
+    font-size: 32px;
+    line-height: 1.25;
+    margin-bottom: 56px;
+  }
+
+  .skill-band {
+    margin-bottom: 60px;
+  }
+
+  .skill-head {
+    gap: 12px;
+  }
+
+  .skill-icon {
+    font-size: 20px;
+  }
+
+  .skill-band h3 {
+    font-size: 22px;
+  }
+
+  .skill-band p {
+    font-size: 15px;
+    line-height: 1.7;
+    max-width: 100%;
+  }
+
+  .skill-chips {
+    gap: 12px;
+  }
+
+  .skill-chips span {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+}
+
+/* -------- SMALL MOBILE (≤480px) -------- */
+@media (max-width: 480px) {
+  .skills-bands {
+    padding: 70px 18px;
+  }
+
+  .skills-title {
+    font-size: 28px;
+    margin-bottom: 48px;
+  }
+
+  .skill-band h3 {
+    font-size: 20px;
+  }
+
+  .skill-band p {
+    font-size: 14.5px;
+  }
+
+  .skill-chips span {
+    padding: 8px 14px;
+    font-size: 12.5px;
+  }
+}
+
+/* -------- VERY SMALL DEVICES (≤360px) -------- */
+@media (max-width: 360px) {
+  .skills-title {
+    font-size: 26px;
+  }
+
+  .skill-band h3 {
+    font-size: 19px;
+  }
+}

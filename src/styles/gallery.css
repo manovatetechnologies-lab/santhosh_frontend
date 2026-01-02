@@ -1,0 +1,330 @@
+/* ==============================
+   GALLERY PAGE – NAVY + GOLD
+================================ */
+
+.gallery-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(245, 211, 125, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(201, 164, 75, 0.08),
+      transparent 50%
+    ),
+    linear-gradient(
+      180deg,
+      #0b1a3c 0%,
+      #08132d 60%,
+      #060f24 100%
+    );
+  color: #ffffff;
+  padding-bottom: 100px;
+}
+
+
+/* ================= HERO ================= */
+
+.gallery-hero {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 120px 20px 90px;
+  text-align: center;
+}
+.gallery-hero {
+  background: linear-gradient(
+    180deg,
+    rgba(245, 211, 125, 0.06),
+    transparent 65%
+  );
+}
+
+
+.gallery-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #f5d37d, #c9a44b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 18px;
+}
+
+.gallery-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ================= GRID ================= */
+
+.gallery-grid {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 26px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 34px;
+}
+
+/* ================= CARD ================= */
+
+.gallery-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0e204a;
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(245, 211, 125, 0.08);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-12px) scale(1.025);
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(245, 211, 125, 0.25);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= OVERLAY ================= */
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11, 26, 60, 0.96),
+    rgba(11, 26, 60, 0.65),
+    rgba(11, 26, 60, 0.15)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.45s ease;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= TEXT ================= */
+
+.gallery-tag {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f5d37d;
+  margin-bottom: 8px;
+}
+
+.gallery-overlay h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ================= MODAL ================= */
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(245, 211, 125, 0.08),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(6, 15, 36, 0.95),
+      rgba(11, 26, 60, 0.97)
+    );
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+
+.gallery-modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  text-align: center;
+  animation: zoomGold 0.45s ease;
+}
+
+.gallery-modal-content img {
+  max-width: 100%;
+  max-height: 72vh;
+  border-radius: 20px;
+  box-shadow:
+    0 35px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(245, 211, 125, 0.25);
+  margin-bottom: 18px;
+}
+
+.gallery-modal-content h3 {
+  font-size: 22px;
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, #f5d37d, #c9a44b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery-modal-content p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes zoomGold {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+  .gallery-hero h1 {
+    font-size: 34px;
+  }
+
+  .gallery-grid {
+    gap: 24px;
+  }
+}
+/* =====================================
+   EXTRA MOBILE RESPONSIVE – GALLERY
+===================================== */
+
+/* TABLETS */
+@media (max-width: 900px) {
+  .gallery-hero {
+    padding: 100px 18px 70px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 40px;
+  }
+
+  .gallery-hero p {
+    font-size: 17px;
+  }
+
+  .gallery-grid {
+    padding: 0 22px;
+    gap: 28px;
+  }
+}
+
+/* LARGE PHONES */
+@media (max-width: 600px) {
+  .gallery-page {
+    padding-bottom: 70px;
+  }
+
+  .gallery-hero {
+    padding: 90px 16px 60px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 32px;
+    letter-spacing: -0.3px;
+  }
+
+  .gallery-hero p {
+    font-size: 15.5px;
+    line-height: 1.6;
+  }
+
+  .gallery-card {
+    border-radius: 18px;
+  }
+
+  .gallery-overlay {
+    padding: 20px;
+  }
+
+  .gallery-overlay h3 {
+    font-size: 16px;
+  }
+
+  .gallery-tag {
+    font-size: 10px;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 420px) {
+  .gallery-hero h1 {
+    font-size: 28px;
+  }
+
+  .gallery-grid {
+    padding: 0 14px;
+    gap: 20px;
+  }
+
+  .gallery-modal-content img {
+    max-height: 60vh;
+    border-radius: 16px;
+  }
+
+  .gallery-modal-content h3 {
+    font-size: 18px;
+  }
+
+  .gallery-modal-content p {
+    font-size: 13px;
+  }
+}
+
+/* TOUCH DEVICES – REMOVE HOVER DEPENDENCY */
+@media (hover: none) {
+  .gallery-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    background: linear-gradient(
+      to top,
+      rgba(11, 26, 60, 0.85),
+      rgba(11, 26, 60, 0.35),
+      transparent
+    );
+  }
+
+  .gallery-card:hover {
+    transform: none;
+    box-shadow:
+      0 20px 45px rgba(0, 0, 0, 0.35),
+      inset 0 0 0 1px rgba(245, 211, 125, 0.12);
+  }
+}

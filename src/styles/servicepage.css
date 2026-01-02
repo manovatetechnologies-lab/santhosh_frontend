@@ -1,0 +1,620 @@
+.service-page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0a1538, #020713);
+  color: #e6e8ef;
+  padding: 120px 80px;
+}
+
+.service-hero h1 {
+  font-size: 56px;
+  color: #d4af37;
+  margin-bottom: 16px;
+}
+
+.service-hero p {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cfd4ea;
+}
+
+.service-content {
+  margin-top: 60px;
+  max-width: 820px;
+}
+
+.service-content h2 {
+  color: #d4af37;
+  margin-bottom: 16px;
+}
+
+.service-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.page-wrapper {
+  animation: fadeSlide 0.6s ease both;
+}
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.service-page {
+  min-height: 100vh;
+  padding: 120px 80px;
+  background: radial-gradient(circle at top, #0a1538, #020713);
+  color: #e6e8ef;
+}
+
+.service-tag {
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #d4af37;
+}
+
+.service-hero h1 {
+  font-size: 54px;
+  margin: 14px 0;
+  color: #ffffff;
+}
+
+.service-hero p {
+  max-width: 760px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cfd4ea;
+}
+
+.service-content {
+  margin-top: 64px;
+  max-width: 820px;
+}
+
+.service-content h2 {
+  color: #d4af37;
+  margin-bottom: 14px;
+}
+
+.service-content p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.service-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1024px) {
+  .service-page {
+    padding: 100px 48px;
+  }
+
+  .service-hero h1 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-page {
+    padding: 90px 28px;
+  }
+
+  .service-hero h1 {
+    font-size: 36px;
+  }
+
+  .service-hero p {
+    font-size: 16px;
+  }
+
+  .service-content {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-page {
+    padding: 80px 20px;
+  }
+
+  .service-hero h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .service-tag {
+    font-size: 10px;
+    letter-spacing: 3px;
+  }
+
+  .service-content h2 {
+    font-size: 18px;
+  }
+
+  .service-content p,
+  .service-content ul li {
+    font-size: 15px;
+  }
+}
+.service-page {
+  min-height: 100vh;
+  padding: 120px 80px;
+  background: radial-gradient(circle at top, #0a1538, #020713);
+  color: #e6e8ef;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 40px;
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.service-tag {
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #d4af37;
+}
+
+.service-hero h1 {
+  font-size: 52px;
+  margin: 16px 0;
+}
+
+.service-hero p {
+  max-width: 780px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.service-box-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 72px;
+}
+
+.service-box {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 32px;
+}
+
+.service-box h3 {
+  color: #d4af37;
+  margin-bottom: 14px;
+}
+
+.service-box ul li {
+  margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .service-box-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-page {
+    padding: 90px 28px;
+  }
+
+  .service-hero h1 {
+    font-size: 36px;
+  }
+}
+.service-hero-advanced {
+  max-width: 980px;
+  margin-bottom: 90px;
+}
+
+.service-hero-advanced h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  margin: 18px 0;
+}
+
+.service-hero-advanced p {
+  font-size: 20px;
+  line-height: 1.8;
+  color: #cfd4ea;
+}
+
+.service-split {
+  max-width: 720px;
+  margin-bottom: 80px;
+}
+
+.service-flow ul li {
+  padding-left: 24px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.service-flow ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+}
+
+.framework-grid,
+.deliverable-grid,
+.outcome-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.framework-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.framework-card {
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(212,175,55,0.12), rgba(255,255,255,0.02));
+}
+
+.deliverable-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.deliverable-item {
+  padding: 22px;
+  border-left: 3px solid #d4af37;
+}
+
+.service-outcomes {
+  margin-top: 100px;
+  padding: 60px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(10,21,56,0.4));
+}
+
+.outcome-pill {
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .framework-grid,
+  .deliverable-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero-advanced h1 {
+    font-size: 38px;
+  }
+
+  .service-page {
+    padding: 80px 24px;
+  }
+}
+
+/* ================================
+   SERVICE CTA
+================================ */
+
+.service-cta {
+  margin-top: 160px;
+  padding: 90px 72px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 210, 106, 0.12),
+    rgba(18, 42, 82, 0.95)
+  );
+  border-radius: 36px;
+  border: 1px solid rgba(245, 210, 106, 0.35);
+  text-align: center;
+  color: #ffffff;
+}
+
+.service-cta::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #f5d26a;
+  margin: 0 auto 40px;
+  border-radius: 3px;
+}
+
+
+.service-cta h3 {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+
+.service-cta p {
+  font-size: 18px;
+  color: #c7d2e2;
+  max-width: 700px;
+  margin: 0 auto 36px;
+  line-height: 1.7;
+}
+
+/* CTA BUTTON */
+.cta-primary {
+  display: inline-block !important;
+  padding: 16px 42px;
+  background: #f5d26a;
+  color: #0b1c4d;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(245, 210, 106, 0.35);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-cta {
+    padding: 60px 28px;
+  }
+
+  .service-cta h3 {
+    font-size: 26px;
+  }
+}
+
+/* ================================
+   FORCE SERVICE CTA VISIBILITY
+================================ */
+/* ================================
+   FINAL SERVICE CTA (SINGLE SOURCE)
+================================ */
+
+.service-cta {
+  margin-top: 100px;
+  padding: 80px 72px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 210, 106, 0.12),
+    rgba(18, 42, 82, 0.95)
+  );
+  border-radius: 36px;
+  border: 1px solid rgba(245, 210, 106, 0.35);
+  text-align: center;
+  color: #ffffff;
+}
+
+.service-cta::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 3px;
+  background: #f5d26a;
+  margin: 0 auto 32px;
+  border-radius: 3px;
+}
+
+.service-cta h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.service-cta p {
+  font-size: 18px;
+  color: #c7d2e2;
+  max-width: 700px;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
+.cta-primary {
+  display: inline-block;
+  padding: 16px 44px;
+  background: #f5d26a;
+  color: #0b1c4d;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(245, 210, 106, 0.35);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .service-cta {
+    padding: 60px 26px;
+  }
+
+  .service-cta h3 {
+    font-size: 24px;
+  }
+}
+/* ================================
+   SERVICE CTA SECTION (FINAL)
+================================ */
+
+.service-cta-section {
+  padding: 0 80px 140px;
+  background: radial-gradient(circle at bottom, #020713, #020713);
+}
+
+@media (max-width: 768px) {
+  .service-cta-section {
+    padding: 0 24px 100px;
+  }
+}
+/* =================================================
+   SERVICE PAGE – EXTRA MOBILE RESPONSIVE LAYER
+   (ADD AT VERY END – NO EXISTING CODE TOUCHED)
+================================================= */
+
+/* -------- TABLET (≤1024px) -------- */
+@media (max-width: 1024px) {
+  .service-page {
+    padding: 100px 48px;
+  }
+
+  .service-hero-advanced h1 {
+    font-size: 46px;
+  }
+
+  .service-hero p,
+  .service-hero-advanced p {
+    font-size: 17px;
+  }
+
+  .framework-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-outcomes {
+    padding: 48px;
+  }
+}
+
+/* -------- MOBILE (≤768px) -------- */
+@media (max-width: 768px) {
+  .service-page {
+    padding: 88px 24px;
+  }
+
+  .back-link {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+
+  .service-tag {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .service-hero h1,
+  .service-hero-advanced h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .service-hero p,
+  .service-hero-advanced p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .service-content {
+    margin-top: 48px;
+  }
+
+  .service-box-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .service-box {
+    padding: 26px;
+  }
+
+  .framework-grid,
+  .deliverable-grid,
+  .outcome-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .service-outcomes {
+    margin-top: 72px;
+    padding: 36px 28px;
+  }
+
+  .outcome-pill {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+}
+
+/* -------- SMALL MOBILE (≤480px) -------- */
+@media (max-width: 480px) {
+  .service-page {
+    padding: 72px 18px;
+  }
+
+  .service-hero h1,
+  .service-hero-advanced h1 {
+    font-size: 28px;
+  }
+
+  .service-hero p,
+  .service-hero-advanced p,
+  .service-content p,
+  .service-content ul li {
+    font-size: 15px;
+  }
+
+  .service-content h2 {
+    font-size: 18px;
+  }
+
+  .service-box {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .framework-card {
+    padding: 20px;
+  }
+
+  .deliverable-item {
+    padding: 18px;
+  }
+
+  .service-cta {
+    padding: 48px 22px;
+    border-radius: 28px;
+  }
+
+  .service-cta h3 {
+    font-size: 22px;
+  }
+
+  .service-cta p {
+    font-size: 15px;
+  }
+
+  .cta-primary {
+    width: 100%;
+    padding: 14px 0;
+    text-align: center;
+  }
+}
+
+/* -------- VERY SMALL DEVICES (≤360px) -------- */
+@media (max-width: 360px) {
+  .service-hero h1,
+  .service-hero-advanced h1 {
+    font-size: 26px;
+  }
+
+  .service-cta h3 {
+    font-size: 20px;
+  }
+}

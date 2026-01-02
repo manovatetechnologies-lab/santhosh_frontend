@@ -1,0 +1,223 @@
+/* ================================
+   BASE NAVBAR
+================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 24, 55, 0.95),
+    rgba(6, 24, 55, 0.85)
+  );
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(245, 210, 106, 0.15);
+   width: 100%;
+  height: 80px;
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* ================================
+   BRAND
+================================ */
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.brand-dot {
+  width: 8px;
+  height: 8px;
+  background: #f5d26a;
+  border-radius: 50%;
+}
+
+.brand-name {
+  color: #e6edff;
+  font-size: 15px;
+}
+
+.brand-name em {
+  color: #9fb2d8;
+  font-style: normal;
+}
+
+/* ================================
+   DESKTOP LINKS
+================================ */
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: #e6edff;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-links button::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f5d26a;
+  transition: width 0.3s ease;
+}
+
+.nav-links button:hover::after,
+.nav-links button.active::after {
+  width: 100%;
+}
+
+/* ================================
+   CTA BUTTON
+================================ */
+
+.nav-cta {
+  background: linear-gradient(135deg, #ffe08a, #f5c842);
+  color: #0b1a33;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ================================
+   HAMBURGER TOGGLE
+================================ */
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #e6edff;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+/* ================================
+   MOBILE MENU
+================================ */
+
+.mobile-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+  display: none;
+  flex-direction: column;
+  gap: 18px;
+
+  padding: 24px;
+  background: rgba(6, 24, 55, 0.98);
+  border-top: 1px solid rgba(245, 210, 106, 0.15);
+  z-index: 1100;
+}
+
+.mobile-nav button {
+  background: none;
+  border: none;
+  color: #e6edff;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+  padding: 6px 0;
+}
+
+/* MOBILE CTA */
+.mobile-cta {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ffe08a, #f5c842);
+  color: #0b1a33;
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1024px) {
+  .nav-inner {
+    padding: 16px 32px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .nav-inner {
+    padding: 14px 20px;
+  }
+
+  /* BRAND */
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .brand-name em {
+    display: none;
+  }
+
+  /* HIDE DESKTOP NAV */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  /* SHOW TOGGLE */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* OPEN MOBILE MENU */
+  .mobile-nav.open {
+    display: flex;
+  }
+}
+
+/* ================================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+  .nav-inner {
+    padding: 12px 16px;
+  }
+}
